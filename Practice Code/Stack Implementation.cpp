@@ -1,8 +1,5 @@
 #include<bits/stdc++.h>
-
-
 using namespace std;
-
 
 #define MAX 2
 int Stack[MAX];
