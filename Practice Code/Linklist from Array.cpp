@@ -17,11 +17,13 @@ struct Node *LinklistArray(int arra[], int size)
         temp->data = arra[i];
         temp->next = NULL;
 
-        if(head == NULL){
+        if(head == NULL)
+        {
             head = temp;
             current = temp;
         }
-        else{
+        else
+        {
             current->next = temp;
             current = current->next;
         }
@@ -37,7 +39,8 @@ int main()
     struct Node *head;
     head = LinklistArray(a, 3);
 
-    while(head!=NULL){
+    while(head!=NULL)
+    {
         printf("%d -> ",head->data);
         head = head->next;
     }
