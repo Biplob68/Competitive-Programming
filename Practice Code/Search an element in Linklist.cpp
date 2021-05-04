@@ -9,25 +9,53 @@ struct Node
 };
 
 
-Node *CreateLinklist(int value, Node *next)
+struct Node *LinklistArray(int arra[], int size)
 {
-    struct Node *a = NULL;
-    a = (struct Node*)malloc(sizeof(struct Node));
+    struct Node *head=NULL, *temp=NULL, *current = NULL;
+    int i;
+    for(i=0; i<size; i++)
+    {
+        temp = (struct Node *)malloc(sizeof (struct Node));
+        temp->data = arra[i];
+        temp->next = NULL;
 
-    a->data = value;
+        if(head == NULL)
+        {
+            head = temp;
+            current = temp;
+        }
+        else
+        {
+            current->next = temp;
+            current = current->next;
+        }
 
+    }
+    return head;
+}
 
-    return a;
+int SearchItem(struct Node *head, int value)
+{
+    int index = 1;
 
+    while(head != NULL)
+    {
+        if(head->data == value)
+        {
+            return index;
+        }
+        index++;
+        head = head->next;
+    }
+    return 0;
 }
 
 int main()
 {
-    Node *x, *y, *z;
-    x = CreateLinklist(10, NULL);
-    y = CreateLinklist(20, NULL);
-
-    printf("Data %d\n", x->data);
+    int a[] = {5, 20, 30,40,50,60};
+    struct Node *head;
+    head = LinklistArray(a, 6);
+    printf("Index = %d\n",SearchItem(head,50));
 
     return 0;
 }
