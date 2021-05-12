@@ -48,6 +48,8 @@ void InsertatBegining(int num)
     newNode->next = head;
     head = newNode;
 }
+
+
 void display()
 {
     struct Node *temp;
