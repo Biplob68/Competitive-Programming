@@ -33,7 +33,7 @@ void CreateLinklist(int n)
         current->data = num;      // links the num field of current with num
         current->next = NULL;     // links the address field of current with NULL
 
-        temp->next = current;     // links previous node i.e. tmp to the current
+        temp->next = current;     // links previous node i.e. temp to the current
         temp = temp->next;
     }
 }
