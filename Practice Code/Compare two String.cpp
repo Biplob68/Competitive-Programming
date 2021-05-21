@@ -30,6 +30,7 @@ int main()
     printf("\nEnter 2nd string : ");
     scanf("%s", s2);
     int compare = stringCompare(s1,s2);
+
     if(compare == 1)
         printf("\n\nBoth the strings are exactly same.\n\n");
      else
