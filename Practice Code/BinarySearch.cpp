@@ -30,7 +30,11 @@ int main()
     if (result == -1)
         printf("Not found\n");
     else
-        printf("Element is found at index %d\n", result+1);
+        printf("Element is found at index %d\n", result);
 
     return 0;
 }
+
+
+// Average time complexity: O(log n)
+// The space complexity of the binary search is O(1)
