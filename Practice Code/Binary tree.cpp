@@ -32,6 +32,8 @@ void add_right_child(struct Node *root, struct Node *child)
     root->right = child;
 }
 
+
+//Create Binary tree
 struct Node *createTree()
 {
     struct Node *two = createNode(2);
@@ -55,5 +57,6 @@ int main()
 {
     struct Node *root = createTree();
     printf("%d\n",root->data);
+    return 0;
 
 }
