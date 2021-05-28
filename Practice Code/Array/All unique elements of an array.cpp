@@ -1,5 +1,4 @@
-
-/*#include <stdio.h>
+#include <stdio.h>
 int main()
 {
     int arr1[100], n,ctr=0;
@@ -42,7 +41,7 @@ int main()
 }
 
 
-*/
+/*
 #include <stdio.h>
 #define MAX_SIZE 100
 
@@ -92,3 +91,4 @@ int main()
 
     return 0;
 }
+*/
