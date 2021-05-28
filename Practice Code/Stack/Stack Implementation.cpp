@@ -1,43 +1,54 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-#define MAX 2
+#define MAX 5
 int Stack[MAX];
 
 int top = -1;
 
-void push(int x){
+void push(int x)
+{
 
+    printf("Push Operation \n");
 
-    if(top < MAX-1){
+    if(top < MAX-1)
+    {
         top = top+1;
         Stack[top] = x;
         printf("The Element %d is added into stack\n",x);
     }
-    else {
+    else
+    {
         printf("No Space in the stack!\n");
     }
 
 }
 
-int pop(){
+int pop()
+{
 
-    if(top>=0){
+    printf("Pop Operation \n");
+    if(top>=0)
+    {
         printf("Top element of the stack is %d\n",Stack[top]);
         top--;
     }
-    else {
+    else
+    {
         printf("There is no element is the stack to pop! Empty stack!\n");
     }
 
 
 }
-int peek(){
-
-    if(top>=0){
+int peek()
+{
+    printf("Peek Operation \n");
+    if(top>=0)
+    {
         printf("Top element of the stack is %d\n",Stack[top]);
     }
-    else {
+    else
+    {
         printf("There is no element is the stack! Empty stack!\n");
     }
 
@@ -46,10 +57,12 @@ int main()
 {
     push(3);
     pop();
-   // push(5);
+    // push(5);
     peek();
     push(8);
     pop();
+    push(10);
+    push(5);
     peek();
     return 0;
 
