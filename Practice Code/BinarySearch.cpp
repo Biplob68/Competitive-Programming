@@ -2,11 +2,11 @@
 
 using namespace std;
 
-int binarysearch(int arra[], int n, int x)
+int binarysearch(int arra[], int size, int x)
 {
     int left, right, mid;
     left = 0;
-    right = n-1;
+    right = size-1;
 
     while(left <= right)
     {
@@ -23,9 +23,9 @@ int binarysearch(int arra[], int n, int x)
 int main()
 {
     int array[] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-    int n = sizeof(array) / sizeof(array[0]);
+    int size = sizeof(array) / sizeof(array[0]);
     int x = 8;
-    int result = binarysearch(array, n, x);
+    int result = binarysearch(array, size, x);
 
     if (result == -1)
         printf("Not found\n");
