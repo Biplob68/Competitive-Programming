@@ -1,7 +1,7 @@
 
 #include<stdio.h>
 #include<stdlib.h>
-//Program to count most occuring element
+
 int findMostFrequentElement(int A[], int n)
 {
     for (int i = 0; i < n; i++)    //Sort the array
@@ -17,6 +17,7 @@ int findMostFrequentElement(int A[], int n)
            }
         }
     }
+
     //finnd the most occuring element
     int max_count = 1, res = A[0], count = 1;
     for (int i = 1; i < n; i++) {
@@ -38,15 +39,17 @@ int findMostFrequentElement(int A[], int n)
     }
     return res; //return the most repeatinng  element
 }
-//Driver Program
+
+
+
 int main()
 {
-    int n;              //Array Size Declaration
+    int n;
     printf("Enter the number of elements ");
     scanf("%d",&n);
-    int array[n];      //Array Declaration
+    int array[n];
     printf("Enter the array elements");
-    for(int i=0;i<n;i++)   //Initializing Array Elements
+    for(int i=0;i<n;i++)
     {
         scanf("%d",&array[i]);
     }
