@@ -25,7 +25,7 @@ int main()
     while(str[i] != '\0')
     {
         ascii = (int)str[i];
-        printf("%d\n",ascii);
+       // printf("%d\n",ascii);
         freq[ascii] += 1;
 
         i++;
