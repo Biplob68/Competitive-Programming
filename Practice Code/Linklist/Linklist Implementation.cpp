@@ -16,6 +16,7 @@ void printLinkedlist(struct Node *p)
         printf("%d->", p->data);
         p = p->next;
     }
+    printf("NULL\n");
 }
 
 
