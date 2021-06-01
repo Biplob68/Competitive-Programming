@@ -7,11 +7,13 @@ int main()
 
     int n,i;
 
+    printf("Enter the size of array : ");
     scanf("%d",&n);
 
     printf("Enter the array elements : \n");
     for(i=0; i<n; i++)
     {
+        printf("Enter %d th element : ",i+1);
         scanf("%d",&arra[i]);
 
     }
@@ -26,7 +28,7 @@ int main()
         }
     }
 
-    printf("Max Element in array : %d\n",max);
+    printf("\nMax Element in array : %d\n",max);
     return 0;
 
 }
