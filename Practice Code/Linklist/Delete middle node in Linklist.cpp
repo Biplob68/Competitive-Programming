@@ -59,20 +59,20 @@ void display()
 void DeleteMiddleNode(int position)
 {
 
-    struct Node *PreNode, *MiddleNode;
+    struct Node *PreNode, *temp;
 
-    MiddleNode = head;
-    PreNode = head;
+    temp = head;
+    //PreNode = head;
 
     for(int i=2; i<=position; i++)
     {
-        PreNode = MiddleNode;
-        MiddleNode = MiddleNode->next;
+        PreNode = temp;
+        temp = temp->next;
     }
 
-    PreNode->next = MiddleNode->next;
-    MiddleNode->next = NULL;
-    free(MiddleNode);
+    PreNode->next = temp->next;
+    temp->next = NULL;
+    free(temp);
 }
 
 int main()
