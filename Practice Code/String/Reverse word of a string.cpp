@@ -1,34 +1,41 @@
-#include<bits/stdc++.h>
-using namespace std;
+/* C Program to Reverse Order of Words in a String */
 
-void reverseword(char str[])
-{
-    int length = strlen(str);
-
-    int i,j;
-    for(i = length-1; i>=0; i--)
-    {
-        if(str[i] == '\0' || str[i] == ' ')
-        {
-            j = i+1;
-            while(str[j] != '\0' || str[j] != ' ')
-            {
-                printf("%c",str[j]);
-                j++;
-            }
-            printf(" ");
-        }
-    }
-    printf("\n");
-
-}
+#include <stdio.h>
+#include <string.h>
 
 int main()
 {
-    char str[20];
-    cin>>str;
-    //fgets(str, sizeof str, stdin);
-    reverseword(str);
+  	char str[100];
+  	int i, j, len, startIndex, endIndex;
 
-    return 0;
+  	printf("\n Please Enter any String :  ");
+  	gets(str);
+
+  	len = strlen(str);
+  	endIndex = len - 1;
+
+
+  	for(i = len - 1; i >= 0; i--)
+	{
+		if(str[i] == ' ' || i == 0)
+		{
+			if(i == 0)
+			{
+				startIndex = 0;
+			}
+			else
+			{
+				startIndex = i + 1;
+			}
+			for(j = startIndex; j <= endIndex; j++)
+			{
+				printf("%c", str[j]);
+			}
+			endIndex = i - 1;
+			printf(" ");
+		}
+	}
+	printf("\n");
+
+  	return 0;
 }
