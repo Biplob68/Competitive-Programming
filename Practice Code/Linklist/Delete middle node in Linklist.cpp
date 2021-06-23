@@ -62,7 +62,6 @@ void DeleteMiddleNode(int position)
     struct Node *PreNode, *temp;
 
     temp = head;
-    //PreNode = head;
 
     for(int i=2; i<=position; i++)
     {
