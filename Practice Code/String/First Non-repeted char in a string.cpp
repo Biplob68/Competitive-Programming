@@ -3,23 +3,19 @@
 
 int main(void)
 {
-
     char str[100] ;
     scanf("%[^\n]%c", str);
     int len  = strlen(str);
-    int flag;
+    int i,j,flag;
 
-    /* Two loops to compare each character with other character */
-    for(int i = 0; i < len; i++)
+    // Two loops to compare each character with other character
+    for(i = 0; i < len; i++)
     {
-
         flag = 0;
 
-        for(int j = 0; j < len; j++)
+        for(j = 0; j < len; j++)
         {
-
-            /* If it's equal and indexes
-               is not same */
+            // If it's equal and indexes is not same
             if((str[i] == str[j]) && (i != j))
             {
                 flag = 1;
@@ -32,7 +28,6 @@ int main(void)
             printf("First non-repeating character is %c\n",str[i]);
             break;
         }
-
     }
 
     if (flag == 1)
