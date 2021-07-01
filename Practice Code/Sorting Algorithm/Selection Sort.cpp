@@ -23,6 +23,7 @@ void selection_sort(int arra[], int n)
         }
     }
 }
+
 int  main()
 {
     int arra[]= {2,3,9,10,5,7,6,12,4};
@@ -34,3 +35,6 @@ int  main()
     }
     return 0;
 }
+
+// Time Complexity: O(n^2) - For best, worst, average case
+// Space Complexity : O(1)
