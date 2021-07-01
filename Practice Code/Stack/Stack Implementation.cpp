@@ -51,19 +51,32 @@ int peek()
     {
         printf("There is no element is the stack! Empty stack!\n");
     }
+}
 
+void display()
+{
+    printf("All element in Stack : ");
+    for(int i=top; i>=0; i--)
+    {
+        printf("%d ",Stack[i]);
+    }
+
+    printf("\n\n");
 }
 int main()
 {
     push(3);
-    pop();
-    // push(5);
+    push(5);
+    peek();
+    push(2);
+    display();
     peek();
     push(8);
     pop();
     push(10);
     push(5);
     peek();
+    display();
     return 0;
 
 }
