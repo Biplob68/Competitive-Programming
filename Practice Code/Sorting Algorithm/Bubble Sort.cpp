@@ -13,7 +13,6 @@ void bubble_sort(int arra[], int n)
                 temp = arra[j+1];
                 arra[j+1] = arra[j];
                 arra[j] = temp;
-
             }
         }
     }
@@ -33,3 +32,5 @@ int main()
 }
 
 
+// Time complexity : O(n^2) - For two loop
+// Space Complexity : O(1) - One array is given , no need to extra space
