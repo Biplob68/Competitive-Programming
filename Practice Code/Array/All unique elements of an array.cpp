@@ -22,7 +22,7 @@ int main()
         ctr=0;
         for(j=0,k=n; j<k+1; j++)
         {
-            //Increment the counter when the seaarch value is duplicate.
+            //Increment the counter when the search value is duplicate.
             if (i!=j)
             {
                 if(arr1[i]==arr1[j])

@@ -32,6 +32,6 @@ int main()
 		}
 	}
 
-	printf("The second minimum is : %d",second_min);
+	printf("The second minimum is : %d\n",second_min);
 	return 0;
 }

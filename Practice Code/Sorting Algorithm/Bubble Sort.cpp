@@ -32,5 +32,5 @@ int main()
 }
 
 
-// Time complexity : O(n^2) - Avarage & Worst Case.  O(n) - Best Case (Traverse through all the elements once to recognize that the array is already sorted.)
+// Time complexity : O(n^2) - Average case & Worst Case, O(n) - Best Case
 // Space Complexity : O(1) - One array is given , no need to extra space
