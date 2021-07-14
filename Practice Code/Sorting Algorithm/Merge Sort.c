@@ -62,7 +62,6 @@ void merge(int array[], int left, int mid, int right)
         }
     }
 
-
   // Pick up the remaining elements of L & R and put in Array[]
     while(i<left_size){
         array[a] = L[i];
