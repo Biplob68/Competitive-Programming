@@ -92,3 +92,7 @@ int main()
 
     return 0;
 }
+
+
+// Time Complexity - O(nlog(n)) - For best, average, worst case. --> Total n operation for every step and total step log2(n) 
+// Space complexity - O(n) - Require equal amount of additional space.
