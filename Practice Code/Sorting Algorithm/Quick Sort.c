@@ -44,8 +44,7 @@ int main()
 
      int n = sizeof(arra) / sizeof(arra[0]);
 
-     quick_sort(arra, 0, n-1);
-
+     quick_sort(arra, 0, n-1);  // perform quick sort on arra
 
      printf("The sorted array: ");
      for(int i=0; i<n; i++)
@@ -56,3 +55,10 @@ int main()
 
      return 0;
 }
+
+
+
+// ----Complexity----
+// O(n log(n)) - Best, average case. --> when the pivot element is always the middle element or near to the middle
+// O(n^2) - Worst case. --> when the pivot element picked is either the greatest or the smallest element.
+// Space Complexity  - O(log(n).
