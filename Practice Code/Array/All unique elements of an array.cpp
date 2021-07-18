@@ -11,7 +11,7 @@ int main()
     printf("Input %d elements in the array :\n",n);
     for(i=0; i<n; i++)
     {
-        printf("element - %d : ",i);
+        printf("element - %d : ",i+1);
         scanf("%d",&arr1[i]);
     }
 
