@@ -14,10 +14,10 @@ void duplicatedchar(char str[])
             if(str[i] == str[j] && str[i] != ' ')
             {
                 cnt++;
-                str[j] = '\0';
+                //str[j] = '\0';
             }
         }
-        if(cnt>1 && str[i] != '\0')
+        if(cnt>1 )
         {
             printf("%c = %d times\n",str[i], cnt);
 

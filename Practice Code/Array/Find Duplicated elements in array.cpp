@@ -2,7 +2,7 @@
 
 int main()
 {
-    int i,j,cnt,n, temp;
+    int i,j,cnt,n;
 
     printf("Enter the size of araay :");
     scanf("%d",&n);
@@ -20,11 +20,10 @@ int main()
     {
         for(j=i+1; j<n; j++)
         {
-            if(arra[i] == arra[j] && arra[i] != temp)
+            if(arra[i] == arra[j] )
             {
                 printf("%d ",arra[j]);
                 cnt++;
-                temp = arra[j];
             }
         }
     }

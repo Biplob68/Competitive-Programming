@@ -1,5 +1,5 @@
 #include <stdio.h>
-void main()
+int main()
 {
     char str[80], search[20];
     int c1=0,c2=0,i,j,flg;
@@ -18,6 +18,7 @@ void main()
         c2++;
     c2--;
 
+     printf("%d %d\n",c1,c2);
 
     for(i=0; i<=c1-c2; i++)
     {

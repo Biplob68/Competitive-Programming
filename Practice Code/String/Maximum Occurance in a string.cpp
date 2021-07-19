@@ -6,7 +6,7 @@
 int main()
 {
     char str[MAX_SIZE];
-    int freq[MAX_CHARS]; // Store frequency of each character
+    int freq[MAX_CHARS];
     int i = 0, max;
     int ascii;
 
