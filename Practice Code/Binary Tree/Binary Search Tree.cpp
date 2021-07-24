@@ -21,27 +21,6 @@ struct node *newNode(int value)
     return newNode;
 }
 
-// Inorder Traversal
-void inorderTraversal(struct node *root)
-{
-    if (root != NULL)
-    {
-
-        inorderTraversal(root->left);
-        printf("%d-> ", root->data);
-        inorderTraversal(root->right);
-    }
-}
-
-// Preorder traversal
-void preorderTraversal(struct node *root) {
-  if (root == NULL) return;
-
-  printf("%d-> ", root->data);
-  preorderTraversal(root->left);
-  preorderTraversal(root->right);
-
-}
 
 // Insert a node
 struct node *insertNode(struct node *node, int value)
@@ -58,13 +37,35 @@ struct node *insertNode(struct node *node, int value)
     return node;
 }
 
+// In-order Traversal
+void inorderTraversal(struct node *root)
+{
+    if (root != NULL)
+    {
+
+        inorderTraversal(root->left);
+        printf("%d-> ", root->data);
+        inorderTraversal(root->right);
+    }
+}
+
+// Pre-order traversal
+void preorderTraversal(struct node *root)
+{
+    if (root == NULL) return;
+
+    printf("%d-> ", root->data);
+    preorderTraversal(root->left);
+    preorderTraversal(root->right);
+
+}
 
 
 // Driver code
 int main()
 {
     struct node *root = NULL;
-    root = insertNode(root, 8);
+    insertNode(root, 8);
     insertNode(root, 3);
     insertNode(root, 1);
 
@@ -84,5 +85,5 @@ int main()
     preorderTraversal(root);
     printf("NULL \n");
 
-
+    return 0;
 }
