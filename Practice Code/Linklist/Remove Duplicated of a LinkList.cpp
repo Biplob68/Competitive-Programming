@@ -53,6 +53,7 @@ void display()
 
 }
 
+// Function to remove duplicated node !
 void remove_duplicated()
 {
     struct Node *node1, *node2, *temp;
@@ -65,6 +66,7 @@ void remove_duplicated()
 
         while(node2->next != NULL)
         {
+            // If duplicate then delete it
             if(node1->data == node2->next->data)
             {
                 temp = node2->next;
@@ -72,11 +74,11 @@ void remove_duplicated()
                 delete(temp);
             }
             else{
-                node2= node2->next;
+                node2 = node2->next;
             }
 
         }
-        node1= node1->next;
+        node1 = node1->next;
     }
 }
 
@@ -95,7 +97,6 @@ int main()
     display();
 
     printf("LinkList after removing duplicated!\n");
-
     remove_duplicated();
     display();
     return 0;
