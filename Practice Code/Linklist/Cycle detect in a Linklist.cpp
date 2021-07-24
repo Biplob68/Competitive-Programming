@@ -1,16 +1,17 @@
 #include<stdio.h>
 #include<stdlib.h>
 
+// A structure of linked list node
 struct Node
 {
     int data;
     struct Node *next;
 }*head;
 
+
 // Function to create linkList
 void CreateLinklist(int n)
 {
-
     struct Node *temp, *current;
     int i,num;
 
@@ -53,6 +54,7 @@ void display()
 
 }
 
+// Function to detect cycle in linklist
 void cycledetect(struct Node *head)
 {
     struct Node *fast_node, *slow_node;
@@ -85,7 +87,7 @@ int main()
 
 
     // Create loop in linked list. Set next pointer of last node to second node from head
-    head->next->next->next->next->next = head->next->next;
+    head->next->next->next->next->next = head->next;
     cycledetect(head);
 
     return 0;
