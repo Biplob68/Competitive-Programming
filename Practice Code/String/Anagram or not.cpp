@@ -5,14 +5,19 @@ using namespace std;
 bool anagram(string s1, string s2)
 {
     int l1, l2;
+
+    // lengths of both strings
     l1 = s1.length();
     l2 = s2.length();
 
+    // If the length of two string is not equal then not anagram
     if(l1 != l2) return false;
 
+    // Sort both the strings
     sort(s1.begin(), s1.end());
     sort(s2.begin(), s2.end());
 
+    // compare the sorted strings
     for(int i=0; i<l1; i++){
         if(s1[i] != s2[i])
             return false;
@@ -35,3 +40,6 @@ int main()
 
     return 0;
 }
+
+
+// Complexity : O(n log(n) --> Because of sorting function.
