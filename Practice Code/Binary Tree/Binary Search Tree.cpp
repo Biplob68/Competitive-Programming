@@ -11,7 +11,7 @@ struct node
 };
 
 // Create a node
-struct node *newNode(int value)
+struct node *createNode(int value)
 {
     struct node *newNode = (struct node *)malloc(sizeof(struct node));
     newNode->data = value;
@@ -22,11 +22,11 @@ struct node *newNode(int value)
 }
 
 
-// Insert a node
+// Recursive function to Insert a node into BST
 struct node *insertNode(struct node *node, int value)
 {
     // Return a new node if the tree is empty
-    if (node == NULL) return newNode(value);
+    if (node == NULL) return createNode(value);
 
     // Traverse to the right place and insert the node
     if (value < node->data)
@@ -65,7 +65,7 @@ void preorderTraversal(struct node *root)
 int main()
 {
     struct node *root = NULL;
-    insertNode(root, 8);
+    root  = insertNode(root, 8);
     insertNode(root, 3);
     insertNode(root, 1);
 
@@ -87,3 +87,5 @@ int main()
 
     return 0;
 }
+
+// Complexity : O(log(n) -> Best, Average case..... O(n) -> Worst case.
