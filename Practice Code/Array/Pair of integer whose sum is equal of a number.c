@@ -1,7 +1,5 @@
 #include<bits/stdc++.h>
-
 using namespace std;
-
 
 int main()
 {
@@ -15,7 +13,6 @@ int main()
     {
         printf("The %d th Element : ",i+1);
         scanf("%d",&arra[i]);
-
     }
 
     printf("The Given Number : \n");
@@ -30,14 +27,11 @@ int main()
             }
         }
     }
-
     return 0;
-
 }
 
 
 /*
-
 #include<bits/stdc++.h>
 using namespace std;
 
