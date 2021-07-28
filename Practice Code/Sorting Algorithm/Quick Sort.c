@@ -44,10 +44,7 @@ int main()
 
      int n = sizeof(arra) / sizeof(arra[0]);
 
-
      quick_sort(arra, 0, n-1); // perform quick sort on arra
-
-     quick_sort(arra, 0, n-1);  // perform quick sort on arra
 
 
      printf("The sorted array: ");
