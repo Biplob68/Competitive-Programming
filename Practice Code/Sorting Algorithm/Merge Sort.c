@@ -94,5 +94,5 @@ int main()
 }
 
 
-// Time Complexity - O(nlog(n)) - For best, average, worst case. --> Total n operation for every step and total step log2(n) 
+// Time Complexity - O(nlog(n)) - For best, average, worst case. --> Total n operation for every step to merge function and total step log2(n) 
 // Space complexity - O(n) - Require equal amount of additional space.
