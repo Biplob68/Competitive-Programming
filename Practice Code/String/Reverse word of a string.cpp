@@ -20,13 +20,11 @@ int main()
 		if(str[i] == ' ' || i == 0)
 		{
 			if(i == 0)
-			{
-				startIndex = 0;
-			}
+			    startIndex = 0;
+			
 			else
-			{
-				startIndex = i + 1;
-			}
+			    startIndex = i + 1;
+			
 			for(j = startIndex; j <= endIndex; j++)
 			{
 				printf("%c", str[j]);
