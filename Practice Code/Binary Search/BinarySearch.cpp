@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
-
 using namespace std;
 
+// Binary search ---> Iterative Method
 int binarysearch(int arra[], int size, int x)
 {
     int left, right, mid;
@@ -38,3 +38,28 @@ int main()
 
 // Average time complexity: O(log n)
 // The space complexity of the binary search is O(1)
+
+
+/*  Binary Search --> Recursive method
+int binary_search(int arra[],int num, int left, int right)
+{
+    if(right>=left)
+    {
+
+        int mid = left+(right - left)/2 ;
+        if(num == arra[mid]) return mid;
+
+        if(num < arra[mid])
+        {
+            return binary_search(arra, left, mid-1, num);
+        }
+
+        if(num > arra[mid])
+        {
+            return binary_search(arra, mid+1, right, num);
+        }
+    }
+    return -1;
+
+}
+*/
