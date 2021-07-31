@@ -116,7 +116,7 @@ int main()
     inorderTraversal(root);
     printf("NULL\n");
 
-    root = deleteNode(root, 4);
+    root = deleteNode(root, 5);
     printf("\nAfter deleting 5\n");
     inorderTraversal(root);
     printf("NULL\n");
