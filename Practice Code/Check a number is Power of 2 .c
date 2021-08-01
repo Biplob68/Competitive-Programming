@@ -26,6 +26,8 @@ int main()
     else
         printf("Not power of 2\n");
 
-
     return 0;
 }
+
+// Time Complexity: O(log(n))
+
