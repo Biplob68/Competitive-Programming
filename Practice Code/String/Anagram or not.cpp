@@ -35,3 +35,44 @@ int main()
 }
 
 // Time Complexity: O(nLogn)--> For sort function
+
+/* 
+------------------------------------------
+Input the two strings.
+Create an array for both the strings.
+Traverse both the strings and store the count of the alphabets of both the strings in respective arrays.
+Check if both the arrays are equal.
+If both the arrays are equal, return true. Else, return false.
+----------------------------------------
+
+int check_anagram(char a[], char b[])
+{
+    int first[26] = {0}, second[26] = {0}, c=0;
+
+// Calculating frequency of characters of first string
+
+    while (a[c] != ‘\0’)
+    {
+        first[a[c]-‘a’]++;
+        c++;
+    }
+
+    c = 0;
+
+    while (b[c] != ‘\0’)
+    {
+        second[b[c]-‘a’]++;
+        c++;
+    }
+
+// Comparing frequency of characters
+
+    for (c = 0; c < 26; c++)
+    {
+        if (first[c] != second[c])
+            return 0;
+    }
+
+    return 1;
+}
+*/
