@@ -31,3 +31,14 @@ int main()
 
 // Time Complexity: O(log(n))
 
+-----------------------------------------
+/* Another method
+bool isPowerOfTwo(int n)
+{
+   if(n==0)
+   return false;
+ 
+   return (ceil(log2(n)) == floor(log2(n)));
+}
+Complexity: O(1) 
+-------------------------------------------
