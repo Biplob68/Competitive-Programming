@@ -1,5 +1,4 @@
 #include<bits/stdc++.h>
-
 using namespace std;
 
 bool anagram(string s1, string s2)
@@ -19,7 +18,6 @@ bool anagram(string s1, string s2)
     }
 
     return true;
-
 }
 
 int main()
@@ -32,6 +30,8 @@ int main()
         cout << "The two strings are anagram of each other"<<endl;
     else
         cout << "The two strings are not anagram of each other"<<endl;
-
+    
     return 0;
 }
+
+// Time Complexity: O(nLogn)--> For sort function
