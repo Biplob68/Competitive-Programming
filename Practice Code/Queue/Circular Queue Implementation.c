@@ -1,101 +1,109 @@
-#include<stdio.h>
-#include <stdbool.h>
+// Circular Queue implementation in C
 
-#define Max 5
+#include <stdio.h>
 
-int Queue[Max];
-int Front = 0, Rear = -1, TotalItem = 0;
+#define SIZE 5
 
+int items[SIZE];
+int front = -1, rear = -1;
 
-bool IsFull()
+// Check if the queue is full
+int isFull()
 {
-    if(TotalItem == Max)
-    {
-        return true;
-    }
-    return false;
+    if ((front == rear + 1) || (front == 0 && rear == SIZE - 1)) return 1;
+    return 0;
 }
 
-bool IsEmpty()
+// Check if the queue is empty
+int isEmpty()
 {
-    if(TotalItem == 0)
-    {
-        return true;
-    }
-    return false;
+    if (front == -1) return 1;
+    return 0;
 }
 
-
-void enQueue(int Item)
+// Adding an element
+void enQueue(int element)
 {
-    if(IsFull())
+    if (isFull())
+        printf("\n Queue is full!! \n");
+    else
     {
-        printf("Sorry The Queue is Full\n");
-        //return ;
+        if (front == -1) front = 0;
+        rear = (rear + 1) % SIZE;
+        items[rear] = element;
+        printf("\n Inserted -> %d", element);
+    }
+}
+
+// Removing an element
+int deQueue()
+{
+    int element;
+    if (isEmpty())
+    {
+        printf("\n Queue is empty !! \n");
+        return (-1);
     }
     else
     {
-        Rear = (Rear +1) % Max;
-        Queue[Rear] = Item;
-        printf("The Item %d is added!\n",Item);
-        TotalItem++;
-
+        element = items[front];
+        if (front == rear)
+        {
+            front = -1;
+            rear = -1;
+        }
+        else
+        {
+            front = (front + 1) % SIZE;
+        }
+        printf("\n Deleted element -> %d \n", element);
+        return (element);
     }
 }
 
-void deQueue()
+// Display the queue
+void display()
 {
-    if(IsEmpty())
-    {
-        printf("Sorry the Queue is Empty!\n");
-        //return -1;
-    }
+    int i;
+    if (isEmpty())
+        printf(" \n Empty Queue\n");
     else
     {
-        //printf("Delete The Front Item\n");
-        int FrontItem = Queue[Front];
-        Queue[Front] = 0;
-
-        Front = (Front+1) % Max;
-        TotalItem--;
-        return FrontItem;
+        printf("\n Index of Front -> %d ", front);
+        printf("\n All Item in Queue -> ");
+        for (i = front; i != rear; i = (i + 1) % SIZE)
+        {
+            printf("%d ", items[i]);
+        }
+        printf("%d ", items[i]);
+        printf("\n Index of Rear -> %d \n", rear);
     }
-}
-
-
-void printQueue()
-{
-    printf("The Queue : ");
-    for(int i=0; i<Max; i++)
-    {
-        printf("%d ",Queue[i]);
-    }
-    printf("\n");
 }
 
 int main()
 {
-
-     deQueue();
-    enQueue(10);
-    enQueue(20);
-    enQueue(30);
-    printQueue();
-    printf("The Item %d is delete\n",deQueue());
-    printQueue();
-    enQueue(40);
-    enQueue(50);
-    printQueue();
-    enQueue(60);
-    printQueue();
-
-    enQueue(70);
+    // Fails because front = -1
     deQueue();
-    printQueue();
-    enQueue(80);
+
+    enQueue(1);
+    enQueue(2);
+    enQueue(3);
+    enQueue(4);
+    enQueue(5);
+
+    // Fails to enqueue because front == 0 && rear == SIZE - 1
+    enQueue(6);
+
+    display();
     deQueue();
-    enQueue(90);
-    printQueue();
+
+    display();
+
+    enQueue(7);
+    display();
+
+    // Fails to enqueue because front == rear + 1
+    enQueue(8);
+
     return 0;
-
 }
