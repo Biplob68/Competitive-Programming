@@ -85,7 +85,6 @@ int main()
     scanf("%d", &n);
     CreateLinklist(n);
 
-
     // Create loop in linked list. Set next pointer of last node to second node from head
     head->next->next->next->next->next = head->next;
     cycledetect(head);
@@ -93,3 +92,22 @@ int main()
     return 0;
 
 }
+
+/*
+-----------------------------
+Using Hash Map:
+-----------------------------
+bool detectLoop(struct node *ptr)
+{
+    unordered_set< node *> s;
+    while (ptr != NULL)
+    {
+        if (s.find(ptr) != s.end())
+            return true;
+        s.insert(ptr);
+        ptr = ptr->next;
+    }
+    return false;
+}
+Complexity : O(n)
+*/
