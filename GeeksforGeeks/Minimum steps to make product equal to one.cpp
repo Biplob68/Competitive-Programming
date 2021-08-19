@@ -51,4 +51,4 @@ int makeProductOne(int arr[], int N) {
             }
         }
         return step;
-    }
+}
