@@ -10,7 +10,6 @@ int main()
 
     while(test--)
     {
-       // int enter=0, exit=0, current, max=0;
         scanf("%d %d",&a,&b);
         exit += a;
         enter += b;
@@ -21,5 +20,6 @@ int main()
     }
 
     printf("%d\n",max);
+
     return 0;
 }
