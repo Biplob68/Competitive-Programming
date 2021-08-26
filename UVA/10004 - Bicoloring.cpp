@@ -25,7 +25,7 @@ bool isBicolor(int n, int start)
         {
             if(color[v[f][i]] == -1)
             {
-                color[v[f][i]] = 0;
+                color[v[f][i]] = 1 - color[f];
                 Q.push(v[f][i]);
             }
             else if(color[v[f][i]] == color[f])
