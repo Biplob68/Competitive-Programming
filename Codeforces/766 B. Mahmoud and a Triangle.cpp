@@ -21,11 +21,11 @@ int main()
 
         if(arra[i]+arra[i+1] > arra[i+2]){
             flag =1;
-            printf("Yes\n");
+            printf("YES\n");
             break;
         }
     }
-    if(flag == 0) printf("No\n");
+    if(flag == 0) printf("NO\n");
 
     return 0;
 }
