@@ -6,8 +6,8 @@ int main()
 {
     std::string str;
 
-    cin >> str;
-    //getline(std::cin, str);
+    // cin >> str;
+    getline(std::cin, str);
 
     for(int i=str.size(); i>=0; i--)
     {
@@ -23,7 +23,6 @@ int main()
             printf("NO\n");
             break;
         }
-
     }
 
     return 0;
