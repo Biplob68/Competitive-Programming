@@ -4,34 +4,31 @@ using namespace std;
 
 int main()
 {
-    int n, n1;
+    int n,x;
 
 
     while(scanf("%d", &n), n)
     {
-        n1 = n;
-        int arra[n], i=0;
-        while(n--)
-        {
-            cin >> arra[i++];
+        // min heap
+        priority_queue < int, vector <int>, greater<int> > q;
+
+        while(n--){
+            scanf("%d",&x);
+            q.push(x);
         }
 
-        sort(arra, arra+n1);
+        int sum =0, cost =0;
 
-        int sum[5005], num = 0, cnt = 0;
-
-        for(i=0; i<n1-1; i++){
-            arra[i+1] += arra[i];
-            sum[cnt++] = arra[i+1];
+        while(q.size() > 1){
+            sum = q.top();
+            q.pop();
+            sum += q.top();
+            q.pop();
+            cost += sum;
+            q.push(sum);
         }
 
-        int total_sum = 0;
-
-        for(i=0; i<cnt; i++){
-            total_sum += sum[i];
-        }
-
-        printf("%d\n", total_sum);
+        printf("%d\n", cost);
     }
 
     return 0;
