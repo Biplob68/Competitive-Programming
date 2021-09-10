@@ -33,17 +33,20 @@ int main()
         }
 
         // if set size is odd then just print middle value
-        if(s.size()%2 == 1)
+        if(s.size()%2 != 0)
         {
             cout << *it << endl;
             continue;
         }
         // if set size is even then find middle two element
         // and print their average
-        temp = *it;
-        it--;
-        temp += *it;
-        cout << temp/2 << endl;
+        else if(s.size()%2 == 0)
+        {
+            temp = *it;
+            it--;
+            temp += *it;
+            cout << temp/2 << endl;
+        }
 
     }
 
