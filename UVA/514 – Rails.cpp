@@ -12,10 +12,13 @@ void track(int n)
 
         int x, top = 0; // first set top 0
 
+        // clear stack element
+        while(!st.empty()) st.pop();
+
         for(int i=0; i<n; i++){
 
             scanf("%d", &x);
-            if(x==0) return ;
+            if(x == 0) return ;
 
             while(top < x){
                 top++;
@@ -23,7 +26,7 @@ void track(int n)
             }
 
             // when the input value is equal
-            // to top of the stack then it can pop
+            // to top of the stack then it can remove
             if(st.top() == x) st.pop();
         }
 
@@ -42,8 +45,6 @@ int main()
         track(test);
         printf("\n");
 
-        // clear stack element for next iteration
-        while(!st.empty()) st.pop();
     }
 
     return 0;
