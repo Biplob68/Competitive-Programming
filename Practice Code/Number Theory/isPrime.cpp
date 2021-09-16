@@ -42,6 +42,7 @@ bool isPrime(long long n)
 
 int main()
 {
+
     long long n;
 
     cin >> n;
@@ -49,3 +50,21 @@ int main()
     if(isPrime(n)) printf("YEs\n");
     else printf("No\n");
 }
+
+// all prime from 1 to n
+/*
+    int Prime[3000];
+	Prime[0]=2,Prime[1]=3;
+	int p=2;
+	for(int i=5;i<=3500;i+=2){
+		int j;
+		for(j=0; j<p; j++)
+			if( i%Prime[j]==0 )
+				break;
+		if( j>=p )
+			Prime[p++]=i;
+	}
+	for(int i=0; i<30; i++){
+        cout << Prime[i] << " ";
+	}
+*/
