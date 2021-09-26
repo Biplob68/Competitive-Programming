@@ -24,7 +24,7 @@ int main()
   uint32_t num;
   cin >> num ;
   
-  cout << hamminWeight(num) << endl;
+  cout << hammingWeight(num) << endl;
   
   return 0;
 }
