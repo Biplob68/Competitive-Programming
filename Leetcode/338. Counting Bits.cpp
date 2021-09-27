@@ -14,8 +14,9 @@ Explanation:
 vector<int> countBits(int n) {
         
         vector <int> bit(n+1);
+        
         if(n == 0) return {0};
-        bit[0] = 0;  
+        bit[0] = 0;  // 0->0
         bit[1] = 1;  // 1->1
         
         for(int i=2; i<=n; i++){
