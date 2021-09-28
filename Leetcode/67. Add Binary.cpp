@@ -20,7 +20,7 @@ string addBinary(string a, string b)
 
         // If current sum is 1->1 or 3->11 then add 1 to result
         // If current sum is 2->10 then add 0 to the result
-        result = char(sum%2 - '0') + result;
+        result = char(sum%2 + '0') + result;
 
         // carry of the current sum;
         sum = sum / 2;
