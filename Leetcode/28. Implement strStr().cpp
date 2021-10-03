@@ -15,9 +15,13 @@ int strStr(string haystack, string needle) {
         int index=0, i=0, j=0;
         
         while(i<len1 && j<len2){
+                
+            // check char by char and increase length to compare     
             if(haystack[i++] == needle[j]){
                 j++;
             }
+                
+            // if char is not same then reset value    
             else {
                 i = i-j;
                 index = i;
