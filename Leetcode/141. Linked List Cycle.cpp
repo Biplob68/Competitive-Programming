@@ -5,7 +5,7 @@ Explanation: There is a cycle in the linked list, where the tail connects to the
 */
 
 
-// Function to check the linklist exit a cycle or not
+// Function to check the linklist exit a cycle or not --> Using two pointer
 bool hasCycle(ListNode *head) {
         struct ListNode *slow, *fast;
         slow = head;
