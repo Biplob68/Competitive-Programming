@@ -20,3 +20,15 @@ vector <int> inorderTraversal(TreeNode root) {
     return v;
 }
 
+
+// BST In-order Traversal using Recursion
+void inorderTraversal(struct node *root)
+{
+    if (root != NULL)
+    {
+
+        inorderTraversal(root->left);
+        printf("%d-> ", root->data);
+        inorderTraversal(root->right);
+    }
+}
