@@ -165,3 +165,121 @@ int main(){
         cout<< endl;
     }
 } */
+
+
+/* Another method
+#include<bits/stdc++.h>
+using namespace std;
+int n;
+int g[500][500]= {0};
+int color[500];
+
+
+bool bfs(int src)
+{
+    int q[10000];
+    int s=0,e=0;
+    color[src]=1;
+    q[s]=src,s++;
+    while(e<s)
+    {
+        int u;
+        u=q[e],e++;
+
+        if(g[u][u]==1)
+            return false;
+
+        for(int i=1; i<=n; i++)
+            if(g[u][i]==1)
+            {
+                if(color[i]==-1)
+                {
+                    color[i]=1-color[u];
+                    q[s]=i,s++;
+                }
+                else if(color[i]==color[u])
+                return false;
+            }
+
+    }
+    return true;
+}
+
+
+int main()
+{
+    int i,j,k,m,a,b,r=0,c;
+
+    scanf("%d %d",&n,&b);
+    for(i=0; i<b; i++)
+    {
+        scanf("%d %d",&r,&c);
+        g[r][c]=1;
+        g[c][r]=1;
+    }
+
+    for(i=0; i<=n; i++)
+        color[i]=-1;
+
+    b=0;
+
+    for(i=1; i<=n; i++)
+        if(color[i]==-1)
+            if(bfs(i)==false)
+            {
+                b=1;
+                break;
+            }
+
+    if(b==1)
+        printf("NO");
+    else
+        printf("YES");
+
+}
+
+/*
+
+7 8
+1 3
+2 3
+3 4
+3 5
+4 6
+5 6
+5 7
+6 7
+
+ans:no
+
+
+10 9
+1 3
+2 3
+3 4
+3 5
+4 6
+5 6
+5 7
+8 9
+9 10
+
+ans:yes
+
+
+10 10
+1 3
+2 3
+3 4
+3 5
+4 6
+5 6
+5 7
+8 9
+9 10
+8 10
+
+ans:no
+*/
+
+
