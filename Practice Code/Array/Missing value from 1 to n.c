@@ -1,5 +1,4 @@
    // Method: 1
-#include <stdio.h>
 
 // Missing value from 1 to n number
 int getMissing(int a[], int n)
@@ -12,18 +11,8 @@ int getMissing(int a[], int n)
 }
 
 
-int main()
-{
-	int arra[] = { 1, 2, 4, 5, 6 };
-	int miss = getMissing(arra, 5);
-	printf("The missing value: %d\n", miss);
-	return 0;
-}
 
-
-/*
 // Method: 2
-#include<stdio.h>
 
 int getMissing(int arra[], int n)
 {
@@ -38,11 +27,30 @@ int getMissing(int arra[], int n)
     return total;
 }
 
-int main()
-{
-	int a[] = { 1, 2, 4, 5, 6 };
-	int miss = getMissing(a, 5);
-	printf("The missing value: %d\n", miss);
-	return 0;
+
+
+
+// Method: 3 
+ // Binary Search
+public int missingNumber(int[] nums) { //binary search
+    Arrays.sort(nums);
+    int left = 0, right = nums.length, mid= (left + right)/2;
+    while(left<right){
+        mid = (left + right)/2;
+        if(nums[mid]>mid) right = mid;
+        else left = mid+1;
+    }
+    return left;
 }
-*/
+
+
+// Method: 4
+// XOR 
+public int missingNumber(int[] nums) { 
+    int res = nums.length;
+    for(int i=0; i<nums.length; i++){
+        res ^= i;
+        res ^= nums[i];
+    }
+    return res;
+}
