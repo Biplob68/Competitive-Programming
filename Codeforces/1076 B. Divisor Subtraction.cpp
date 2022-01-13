@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 
 using namespace std;
-
+/*
 const int  MAX=100000;
 
 long long prime[MAX];
@@ -23,7 +23,7 @@ void generateprime(long long n){
             cnt++;
         }
     }
-}
+} */
 
 long long smallestdivisor(long long n){
 
