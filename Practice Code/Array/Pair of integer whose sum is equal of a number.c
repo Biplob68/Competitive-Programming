@@ -75,3 +75,22 @@ int main()
 }
 Complexity -> nlog(n) - for quicksort
 */
+
+/* Method 3: using unorder map
+vector<int> twoSum(vector<int> &numbers, int target) {
+        vector<int> ans;
+        unordered_map<int,int> mp;
+        
+        
+        for(int i=0; i<numbers.size(); i++){
+            int val = target-numbers[i];
+            if(mp.find(val) != mp.end()){
+                ans.push_back(mp[val]);
+                ans.push_back(i);
+                return ans;
+            }
+            mp[numbers[i]] = i;
+        }
+        return ans;
+ } 
+*/
