@@ -1,4 +1,6 @@
-   int longestCommonSubsequence(string text1, string text2) {
+
+// Dynamic programming to find out longest common subsequence ( Bottom up approach )
+int longestCommonSubsequence(string text1, string text2) {
         
         int dp[text1.size()+1][text2.size()+1];
         
@@ -21,4 +23,6 @@
         
         // LCS will be last entry of the lookup table
         return dp[text1.size()][text2.size()];
-    }
+}
+// Time complexity: O(n*m) ---> n = length of first string  m = length of second string
+// space complexity: O(n*m)
