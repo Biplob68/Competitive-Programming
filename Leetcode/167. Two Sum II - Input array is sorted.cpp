@@ -34,16 +34,24 @@ vector<int> twoSum(vector<int>& numbers, int target) {
 }
 
 // Solution - 2 --> Using two pointer
-vector<int> twoSum(vector<int>& numbers, int target){
-        int start = 0; end = numbers.size()-1; 
-  
-        while(numbers[start]+numbers[end] != target)
-        {
-          // when the target is greater, then increase the first pointer
-          // else decrease the end pointer
-          if(numbers[start]+numbers[end] < target) start++;
-          else end--;
+vector<int> twoSum(vector<int>& numbers, int target) {
+        
+        vector<int>ans(2);
+        
+        int start=0, end=numbers.size()-1;
+        
+        while(start<end){
+            int sum = numbers[start]+numbers[end];
+            if(sum == target){
+                ans[0] = start+1;
+                ans[1] = end+1;
+                break;
+            }
+            // when the target is greater, then increase the first pointer
+            // else decrease the end pointer
+            else if(sum < target) start++;
+            else end--;
         }
-        return vector<int>{start+1, end+1};
+        return ans;
 }
-          
+// Time Complexity: O(n)
