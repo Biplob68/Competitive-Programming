@@ -36,3 +36,27 @@ bool canVisitAllRooms(vector<vector<int>>& rooms) {
         if(visit.size() == rooms.size()) return true;
         else return false;
 }
+
+
+// Method 2:  Using dfs
+void dfs(vector<vector<int>>& rooms, int start, unordered_set<int>&visit){
+        visit.insert(start);
+        
+        for(int i: rooms[start]){
+            if(visit.count(i) == 0){
+                dfs(rooms, i, visit);
+            }
+        }
+}
+
+bool canVisitAllRooms(vector<vector<int>>& rooms) {
+       
+        unordered_set<int>visit;
+        dfs(rooms, 0, visit);
+        
+        if(visit.size() == rooms.size()) return true;
+        else return false;
+}
+
+// Time Complexity: O(M + N), where M <= 3000 is total number of edges which is sum(rooms[i].length), N <= 1000 is number of vertices.
+// Space Complexity: O(N)
